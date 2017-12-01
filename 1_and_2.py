@@ -10,4 +10,4 @@ def captcha(digits, look_ahead):
     print(sum)
 
 captcha(digits, 1)
-captcha(digits, int(len(digits) / 2))
+captcha(digits, len(digits) // 2)

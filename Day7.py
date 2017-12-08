@@ -11,9 +11,6 @@ class Node:
     def add_child(self, child):
         self.children.append(child)
 
-    def last_root(self):
-        return (self.children and not self.children[0].children)
-
 def search(name):
     for n in nodes:
         if (n.name == name):

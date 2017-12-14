@@ -1,4 +1,3 @@
-import time
 from Day10 import knot_hash
 
 def to_binary(input):

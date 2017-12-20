@@ -1,7 +1,7 @@
 
 import re
 
-epsilon = 10000
+epsilon = 1000
 
 def add_particle(particles, p, v, a):
     particles.append((p, v, a))
@@ -60,7 +60,7 @@ def remove_collision(particles):
         indexes = []
         for key, value in collisions.items():
             if (len(collisions[key]) > 1):
-                indexes.extend(collisions[key])
+                indexes.extend(value)
         if (len(indexes) > 0):
             particles = [element for i, element in enumerate(particles) if i not in indexes]
            
@@ -78,5 +78,6 @@ def closest_to_zero(particles):
     print ("Closest to zero: ", idx)
 
 particles = read()    
-#closest_to_zero(particles)
+closest_to_zero(particles)
+particles = read()    
 remove_collision(particles)
